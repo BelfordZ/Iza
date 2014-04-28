@@ -1,6 +1,6 @@
 {
   "name": "iza",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Iza Validator package? true. Iza type checker? true.",
   "main": "src/lib/iza.js",
   "scripts": {
@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/BelfordZ/Iza/issues"
   },
-  "homepage": "https://github.com/BelfordZ/Iza"
+  "homepage": "https://github.com/BelfordZ/Iza",
+  "devDependencies": {
+    "tape": "~2.12.3"
+  }
 }
