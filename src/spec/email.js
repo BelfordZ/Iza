@@ -40,20 +40,18 @@ var shouldBeFalse = [
 ];
 
 
-tape("email that should work", function(t) {
-  t.plan(shouldBeTrue.length);
-
-  for (var i = 0; i < shouldBeTrue.length; i++) {
+for (var i = 0; i < shouldBeTrue.length; i++) {
+  tape("The Email " + shouldBeTrue[i] + " should be false", function(t) {
+    t.plan(1);
     var valid = iza.email(shouldBeTrue[i]);
     t.equal(valid, true);
-  }  
-});
+  });
+}
 
-tape("email that should not work", function(t) {
-  t.plan(shouldBeFalse.length);
-
-  for (var i = 0; i < shouldBeFalse.length; i++) {
+for (var i = 0; i < shouldBeFalse.length; i++) {
+  tape("The Email " + shouldBeFalse[i] + " should be false", function(t) {
+    t.plan(1);
     var valid = iza.email(shouldBeFalse[i]);
     t.equal(valid, false);
-  }
-});
+  });
+}
