@@ -1,8 +1,8 @@
 {
   "name": "iza",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Iza Validator package? true. Iza type checker? true.",
-  "main": "build/lib/iza.js",
+  "main": "src/lib/iza.js",
   "scripts": {
     "test": "tape build/spec/**/*.js"
   },
