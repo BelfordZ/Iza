@@ -1,0 +1,27 @@
+{
+  "name": "iza",
+  "version": "0.0.0",
+  "description": "Iza Validator package? true. Iza type checker? true.",
+  "main": "build/lib/iza.js",
+  "scripts": {
+    "test": "tape build/spec/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BelfordZ/Iza.git"
+  },
+  "keywords": [
+    "assert",
+    "assertion",
+    "type",
+    "checking",
+    "validation",
+    "validator"
+  ],
+  "author": "belfordz <belfordz66@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BelfordZ/Iza/issues"
+  },
+  "homepage": "https://github.com/BelfordZ/Iza"
+}
