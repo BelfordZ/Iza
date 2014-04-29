@@ -1,6 +1,6 @@
 {
   "name": "iza",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Iza Validator package? true. Iza type checker? true.",
   "main": "src/lib/iza.js",
   "scripts": {
