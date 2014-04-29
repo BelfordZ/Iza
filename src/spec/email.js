@@ -39,19 +39,20 @@ var shouldBeFalse = [
   "email@domain..com"
 ];
 
-
-for (var i = 0; i < shouldBeTrue.length; i++) {
-  tape("The Email " + shouldBeTrue[i] + " should be false", function(t) {
-    t.plan(1);
+tape("Emails that are valid", function(t) {
+  t.plan(shouldBeTrue.length);
+  for (var i = 0; i < shouldBeTrue.length; i++) {
+    console.log(shouldBeTrue[i]);
     var valid = iza.email(shouldBeTrue[i]);
     t.equal(valid, true);
-  });
-}
+  }
+});
 
-for (var i = 0; i < shouldBeFalse.length; i++) {
-  tape("The Email " + shouldBeFalse[i] + " should be false", function(t) {
-    t.plan(1);
-    var valid = iza.email(shouldBeFalse[i]);
+tape("Emails that are invalid: ", function(t) {
+  t.plan(shouldBeFalse.length);
+  for (var j = 0; j < shouldBeFalse.length; j++) {
+    console.log(shouldBeFalse[j]);
+    var valid = iza.email(shouldBeFalse[j]);
     t.equal(valid, false);
-  });
-}
+  }
+});
