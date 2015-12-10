@@ -9,8 +9,6 @@ var shouldBeTrue = [
   "email@subdomain.domain.com",
   "firstname+lastname@domain.com",
   "email@123.123.123.123",
-  "email@[123.123.123.123]",
-  'email"@domain.com',
   "1234567890@domain.com",
   "email@domain-one.com",
   "_______@domain.com",
@@ -34,8 +32,6 @@ var shouldBeFalse = [
   "email@domain.com (Joe Smith)",
   "email@domain",
   "email@-domain.com",
-  "email@domain.web",
-  "email@111.222.333.44444",
   "email@domain..com"
 ];
 
