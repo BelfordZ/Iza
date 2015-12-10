@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/BelfordZ/Iza",
   "devDependencies": {
-    "tape": "~2.12.3"
+    "tape": "~2.12.3",
+    "underscore": "~1.8.3"
   }
 }
