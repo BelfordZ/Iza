@@ -1,4 +1,6 @@
 # Iza useful? yarp!
+[![Build Status](https://travis-ci.org/BelfordZ/Iza.svg?branch=master)](https://travis-ci.org/BelfordZ/Iza)
+
 
 ## Email
 ```
