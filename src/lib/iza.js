@@ -14,7 +14,28 @@ var regex = {
   }
 };
 
+
 module.exports = {
+  youTellMe: (strToTest) => {
+
+    function testDeep(val, key) {
+      if (val instanceof RegExp) {
+        return {
+          type: key,
+          isValid: val.test(strToTest)
+        };
+      }
+
+      return _.chain(val)
+        .each(testDeep(val, key))
+        .flatten();
+    }
+
+    return testDeep()
+      .filter('isValid')
+      .keys()
+      .value();
+  },
   email: function(strToTest) {
     if (typeof strToTest !== 'string') { return false; }
     return regex.email.test(strToTest);
@@ -34,4 +55,5 @@ module.exports = {
       .value()
       .length > 0;
   }
+
 };
