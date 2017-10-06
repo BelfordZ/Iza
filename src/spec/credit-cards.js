@@ -1,9 +1,9 @@
 var tape = require('tape');
 var iza = require('../lib/iza.js');
-var _ = require('underscore');
+var _ = require('lodash');
 
 var shouldBeTrue = {
-  'American Express': [ '378282246310005', '371449635398431' ],
+  Amex: [ '378282246310005', '371449635398431' ],
   'Diners Club': [ '30569309025904', '38520000023237' ],
   Discover: [ '6011111111111117', '6011000990139424' ],
   JCB: [ '3530111333300000', '3566002020360505' ],
@@ -19,7 +19,6 @@ tape("valid credit cards with no type", function(t) {
 
   _.each(shouldBeTrue, function(cardNums, cardType) {
     _.each(cardNums, function(num) {
-      console.log(num, iza.creditCard(num));
       t.equal(iza.creditCard(num), true);
     });
   });
@@ -27,13 +26,17 @@ tape("valid credit cards with no type", function(t) {
 
 
 tape("valid credit cards, including type", function(t) {
-  t.plan(_.reduce(_.keys(shouldBeTrue), function(c, k) {
-    return shouldBeTrue[k].length + c;
-  }, 0));
+  const numberOfTestCases = _.chain(shouldBeTrue)
+          .values()
+          .flatten()
+          .value()
+          .length;
+
+  t.plan(numberOfTestCases);
 
   _.each(shouldBeTrue, function(cardNums, cardType) {
     _.each(cardNums, function(num) {
-      t.equal(iza.creditCard(num, cardType), true);
+      t.equal(iza.creditCard(num, cardType), true, `expected ${cardType} to be valid for numbers ${num}`);
     });
   });
 });

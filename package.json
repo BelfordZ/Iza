@@ -4,7 +4,7 @@
   "description": "Iza Validator package? true. Iza type checker? true.",
   "main": "src/lib/iza.js",
   "scripts": {
-    "test": "tape src/spec/*"
+    "test": "tape src/spec/* | tap-dot"
   },
   "repository": {
     "type": "git",
@@ -25,7 +25,13 @@
   },
   "homepage": "https://github.com/BelfordZ/Iza",
   "devDependencies": {
+    "lodash": "^4.17.4",
+    "tap-dot": "^1.0.5",
     "tape": "~2.12.3",
     "underscore": "~1.8.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "luhn-check": "0.0.3"
   }
 }
