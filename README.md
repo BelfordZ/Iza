@@ -4,8 +4,7 @@
 
 
 # Iza useful? yarp!
-[![Build Status](https://travis-ci.org/BelfordZ/Iza.svg?branch=master)](https://travis-ci.org/BelfordZ/Iza)
-
+Iza is a string validation utility. Nothing but the most accurate and best validations make it into this repo.
 
 ## Email
 ```
