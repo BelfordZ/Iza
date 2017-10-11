@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/BelfordZ/Iza.svg?branch=master)](https://travis-ci.org/BelfordZ/Iza)
 [![npm](https://img.shields.io/npm/dt/express.svg)](https://www.npmjs.com/package/iza)
+[![npm](https://img.shields.io/npm/dw/localeval.svg)](https://www.npmjs.com/package/iza)
 
 
 # Iza useful? yarp!
