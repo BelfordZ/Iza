@@ -43,4 +43,9 @@ iza.creditCard('Visa', 4111111111111111) // returns true
 iza.creditCard('leroy+jenkins@super.crazy') // returns true
 ```
 
+
+## Dont know what it is? Ask iza!
+```
+iza.youTellMe('foo@bar.baz') // returns ['email']
+```
 Feel free to make a PR to merge to develop if you would like to contribute.
