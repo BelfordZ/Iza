@@ -27,13 +27,15 @@ module.exports = {
       }
 
       return _.chain(val)
-        .each(testDeep(val, key))
+        .values()
+        .each(testDeep)
         .flatten();
     }
 
-    return testDeep()
+    return _.chain(regex)
+      .map(testDeep)
       .filter('isValid')
-      .keys()
+      .map('type')
       .value();
   },
   email: function(strToTest) {
